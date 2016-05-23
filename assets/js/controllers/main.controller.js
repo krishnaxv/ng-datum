@@ -5,202 +5,216 @@ function MainController($log, $interval) {
   vm.heading = 'Visualization';
 
   // Visualization data
-  vm.identifier1 = '_' + Math.random().toString(36).substr(2, 9);
-  vm.type1 = 'BarChart';
-  vm.data1 = [
-     ['Element', 'Density', { role: 'style' }, { role: 'annotation' }],
-     ['Copper', 8.94, '#b87333', 'Cu'],
-     ['Silver', 10.49, 'silver', 'Ag'],
-     ['Gold', 19.30, 'gold', 'Au'],
-     ['Platinum', 21.45, 'color: #e5e4e2', 'Pt']
-  ];
-  vm.options1 = {
-    animation:{
-      startup: true,
-      duration: 1000,
-      easing: 'out',
-    },
-    title: 'Lengths of dinosaurs, in meters',
-    // width: 500,
-    // height: 300,
-    chartArea: {
-      width: '75%',
-      height: '75%'
-    },
-    // bar: {
-    //   groupWidth: '95%'
-    // },
-    legend: {
-      position: 'none'
+  vm.visualization1 = {
+    identifier: '_' + Math.random().toString(36).substr(2, 9),
+    type: 'BarChart',
+    data: [
+      ['Element', 'Density', { role: 'style' }, { role: 'annotation' }],
+      ['Copper', 8.94, '#b87333', 'Cu'],
+      ['Silver', 10.49, 'silver', 'Ag'],
+      ['Gold', 19.30, 'gold', 'Au'],
+      ['Platinum', 21.45, 'color: #e5e4e2', 'Pt']
+    ],
+    options: {
+      animation:{
+        startup: true,
+        duration: 1000,
+        easing: 'out',
+      },
+      title: 'Lengths of dinosaurs, in meters',
+      chartArea: {
+        width: '75%',
+        height: '75%'
+      },
+      legend: {
+        position: 'none'
+      }
     }
   };
 
-  vm.identifier2 = '_' + Math.random().toString(36).substr(2, 9);
-  vm.type2 = 'Histogram';
-  vm.data2 = [
-    ['Dinosaur', 'Length'],
-    ['Acrocanthosaurus (top-spined lizard)', 12.2],
-    ['Albertosaurus (Alberta lizard)', 9.1],
-    ['Allosaurus (other lizard)', 12.2],
-    ['Apatosaurus (deceptive lizard)', 22.9],
-    ['Archaeopteryx (ancient wing)', 0.9],
-    ['Argentinosaurus (Argentina lizard)', 36.6],
-    ['Baryonyx (heavy claws)', 9.1],
-    ['Brachiosaurus (arm lizard)', 30.5],
-    ['Ceratosaurus (horned lizard)', 6.1],
-    ['Coelophysis (hollow form)', 2.7],
-    ['Compsognathus (elegant jaw)', 0.9],
-    ['Deinonychus (terrible claw)', 2.7],
-    ['Diplodocus (double beam)', 27.1],
-    ['Dromicelomimus (emu mimic)', 3.4],
-    ['Gallimimus (fowl mimic)', 5.5],
-    ['Mamenchisaurus (Mamenchi lizard)', 21.0],
-    ['Megalosaurus (big lizard)', 7.9],
-    ['Microvenator (small hunter)', 1.2],
-    ['Ornithomimus (bird mimic)', 4.6],
-    ['Oviraptor (egg robber)', 1.5],
-    ['Plateosaurus (flat lizard)', 7.9],
-    ['Sauronithoides (narrow-clawed lizard)', 2.0],
-    ['Seismosaurus (tremor lizard)', 45.7],
-    ['Spinosaurus (spiny lizard)', 12.2],
-    ['Supersaurus (super lizard)', 30.5],
-    ['Tyrannosaurus (tyrant lizard)', 15.2],
-    ['Ultrasaurus (ultra lizard)', 30.5],
-    ['Velociraptor (swift robber)', 1.8]
-  ];
-
-  vm.options2 = {
-    animation:{
-      startup: true,
-      duration: 1000,
-      easing: 'out',
-    },
-    title: 'Lengths of dinosaurs, in meters',
-    // width: 500,
-    // height: 300,
-    chartArea: {
-      width: '75%',
-      height: '75%'
-    },
-    legend: {
-      position: 'none'
+  vm.visualization2 = {
+    identifier: '_' + Math.random().toString(36).substr(2, 9),
+    type: 'Histogram',
+    data: [
+      ['Dinosaur', 'Length'],
+      ['Acrocanthosaurus (top-spined lizard)', 12.2],
+      ['Albertosaurus (Alberta lizard)', 9.1],
+      ['Allosaurus (other lizard)', 12.2],
+      ['Apatosaurus (deceptive lizard)', 22.9],
+      ['Archaeopteryx (ancient wing)', 0.9],
+      ['Argentinosaurus (Argentina lizard)', 36.6],
+      ['Baryonyx (heavy claws)', 9.1],
+      ['Brachiosaurus (arm lizard)', 30.5],
+      ['Ceratosaurus (horned lizard)', 6.1],
+      ['Coelophysis (hollow form)', 2.7],
+      ['Compsognathus (elegant jaw)', 0.9],
+      ['Deinonychus (terrible claw)', 2.7],
+      ['Diplodocus (double beam)', 27.1],
+      ['Dromicelomimus (emu mimic)', 3.4],
+      ['Gallimimus (fowl mimic)', 5.5],
+      ['Mamenchisaurus (Mamenchi lizard)', 21.0],
+      ['Megalosaurus (big lizard)', 7.9],
+      ['Microvenator (small hunter)', 1.2],
+      ['Ornithomimus (bird mimic)', 4.6],
+      ['Oviraptor (egg robber)', 1.5],
+      ['Plateosaurus (flat lizard)', 7.9],
+      ['Sauronithoides (narrow-clawed lizard)', 2.0],
+      ['Seismosaurus (tremor lizard)', 45.7],
+      ['Spinosaurus (spiny lizard)', 12.2],
+      ['Supersaurus (super lizard)', 30.5],
+      ['Tyrannosaurus (tyrant lizard)', 15.2],
+      ['Ultrasaurus (ultra lizard)', 30.5],
+      ['Velociraptor (swift robber)', 1.8]
+    ],
+    options: {
+      animation:{
+        startup: true,
+        duration: 1000,
+        easing: 'out',
+      },
+      title: 'Lengths of dinosaurs, in meters',
+      chartArea: {
+        width: '75%',
+        height: '75%'
+      },
+      legend: {
+        position: 'none'
+      }
     }
   };
 
-  vm.identifier3 = '_' + Math.random().toString(36).substr(2, 9);
-  vm.type3 = 'GeoChart';
-  vm.data3 = [
-    ['Country', 'Popularity'],
-    ['Germany', 200],
-    ['United States', 300],
-    ['Brazil', 400],
-    ['Canada', 500],
-    ['France', 600],
-    ['RU', 700]
-  ];
-  vm.options3 = {
-    title: 'Country Popularity'
-  };
-
-  vm.identifier4 = '_' + Math.random().toString(36).substr(2, 9);
-  vm.type4 = 'PieChart';
-  vm.data4 = [
-    ['Task', 'Hours per Day'],
-    ['Work', 11],
-    ['Eat', 2],
-    ['Commute', 2],
-    ['Watch TV', 2],
-    ['Sleep', 7]
-  ];
-  vm.options4 = {
-    title: 'My Daily Activities',
-    animation:{
-      startup: true,
-      duration: 1000,
-      easing: 'out',
+  vm.visualization3 = {
+    identifier: '_' + Math.random().toString(36).substr(2, 9),
+    type: 'GeoChart',
+    data: [
+      ['Country', 'Popularity'],
+      ['Germany', 200],
+      ['United States', 300],
+      ['Brazil', 400],
+      ['Canada', 500],
+      ['France', 600],
+      ['RU', 700]
+    ],
+    options: {
+      title: 'Country Popularity'
     }
   };
 
-  vm.identifier5 = '_' + Math.random().toString(36).substr(2, 9);
-  vm.type5 = 'PieChart';
-  vm.options5 = {
-    title: 'My Daily Activities',
-    animation:{
-      startup: true,
-      duration: 1000,
-      easing: 'out',
-    },
-    is3D: true
+  vm.visualization4 = {
+    identifier: '_' + Math.random().toString(36).substr(2, 9),
+    type: 'PieChart',
+    data: [
+      ['Task', 'Hours per Day'],
+      ['Work', 11],
+      ['Eat', 2],
+      ['Commute', 2],
+      ['Watch TV', 2],
+      ['Sleep', 7]
+    ],
+    options: {
+      title: 'My Daily Activities',
+      animation:{
+        startup: true,
+        duration: 1000,
+        easing: 'out',
+      }
+    }
+  }
+
+  vm.visualization5 = {
+    identifier: '_' + Math.random().toString(36).substr(2, 9),
+    type: 'PieChart',
+    data: [
+      ['Task', 'Hours per Day'],
+      ['Work', 11],
+      ['Eat', 2],
+      ['Commute', 2],
+      ['Watch TV', 2],
+      ['Sleep', 7]
+    ],
+    options: {
+      title: 'My Daily Activities',
+      animation:{
+        startup: true,
+        duration: 1000,
+        easing: 'out',
+      },
+      is3D: true
+    }
   };
 
-  vm.identifier6 = '_' + Math.random().toString(36).substr(2, 9);
-  vm.type6 = 'ScatterChart';
-  vm.data6 = [
-    ['Age', 'Weight'],
-    [8, 12],
-    [4, 5.5],
-    [11, 14],
-    [4, 5],
-    [3, 3.5],
-    [6.5, 7]
-  ];
-  vm.options6 = {
-    title: 'Age vs. Weight comparison',
-    animation:{
-      startup: true,
-      duration: 1000,
-      easing: 'out',
-    },
-    hAxis: {
-      title: 'Age',
-      minValue: 0,
-      maxValue: 15
-    },
-    vAxis: {
-      title: 'Weight',
-      minValue: 0,
-      maxValue: 15
-    },
-    legend: 'none'
+  vm.visualization6 = {
+    identifier: '_' + Math.random().toString(36).substr(2, 9),
+    type: 'ScatterChart',
+    data: [
+      ['Age', 'Weight'],
+      [8, 12],
+      [4, 5.5],
+      [11, 14],
+      [4, 5],
+      [3, 3.5],
+      [6.5, 7]
+    ],
+    options: {
+      title: 'Age vs. Weight comparison',
+      animation:{
+        startup: true,
+        duration: 1000,
+        easing: 'out',
+      },
+      hAxis: {
+        title: 'Age',
+        minValue: 0,
+        maxValue: 15
+      },
+      vAxis: {
+        title: 'Weight',
+        minValue: 0,
+        maxValue: 15
+      },
+      legend: 'none'
+    }
   };
 
-  vm.identifier7 = '_' + Math.random().toString(36).substr(2, 9);
-  vm.type7 = 'LineChart';
-  vm.data7 = [
-    ['Year', 'Sales', 'Expenses'],
-    ['2004', 1000, 400],
-    ['2005', 1170, 460],
-    ['2006', 660, 1120],
-    ['2007', 1030, 540],
-    ['2008', 530, 1540],
-    ['2009', 2030, 5040],
-    ['2010', 130, 940],
-    ['2011', 1035, 440],
-    ['2012', 1030, 850],
-  ];
-  vm.options7 = {
-    title: 'Company Performance',
-    animation:{
-      startup: true,
-      duration: 1000,
-      easing: 'out',
-    },
-    curveType: 'function',
-    legend: {
-      position: 'bottom'
+  vm.visualization7 = {
+    identifier: '_' + Math.random().toString(36).substr(2, 9),
+    type: 'LineChart',
+    data: [
+      ['Year', 'Sales', 'Expenses'],
+      ['2004', 1000, 400],
+      ['2005', 1170, 460],
+      ['2006', 660, 1120],
+      ['2007', 1030, 540],
+      ['2008', 530, 1540],
+      ['2009', 2030, 5040],
+      ['2010', 130, 940],
+      ['2011', 1035, 440],
+      ['2012', 1030, 850],
+    ],
+    options: {
+      title: 'Company Performance',
+      animation:{
+        startup: true,
+        duration: 1000,
+        easing: 'out',
+      },
+      curveType: 'function',
+      legend: {
+        position: 'bottom'
+      }
     }
   };
 
   $interval(function () {
     vm.isLoading = false;
-    vm.data1 = [
+    vm.visualization1.data = [
        ['Element', 'Density', { role: 'style' }, { role: 'annotation' }],
        ['Copper', Math.random() * 10, '#b87333', 'Cu'],
        ['Silver', Math.random() * 10, 'silver', 'Ag'],
        ['Gold', Math.random() * 10, 'gold', 'Au'],
        ['Platinum', Math.random() * 10, 'color: #e5e4e2', 'Pt']
     ];
-    vm.data2 = [
+    vm.visualization2.data = [
       ['Dinosaur', 'Length'],
       ['Acrocanthosaurus (top-spined lizard)', Math.random() * 10],
       ['Albertosaurus (Alberta lizard)', Math.random() * 10],
@@ -231,7 +245,7 @@ function MainController($log, $interval) {
       ['Ultrasaurus (ultra lizard)', Math.random() * 10],
       ['Velociraptor (swift robber)', Math.random() * 10]
     ];
-    vm.data3 = [
+    vm.visualization3.data = [
       ['Country', 'Popularity'],
       ['Germany', Math.random() * 1000],
       ['United States', Math.random() * 1000],
@@ -240,7 +254,7 @@ function MainController($log, $interval) {
       ['France', Math.random() * 1000],
       ['RU', Math.random() * 1000]
     ];
-    vm.data4 = [
+    vm.visualization4.data = [
       ['Task', 'Hours per Day'],
       ['Work', Math.random() * 10],
       ['Eat', Math.random() * 10],
@@ -248,7 +262,7 @@ function MainController($log, $interval) {
       ['Watch TV', Math.random() * 10],
       ['Sleep', Math.random() * 10]
     ];
-    vm.data6 = [
+    vm.visualization6.data = [
       ['Age', 'Weight'],
       [Math.random() * 10, Math.random() * 10],
       [Math.random() * 10, Math.random() * 10],
@@ -275,7 +289,7 @@ function MainController($log, $interval) {
       [Math.random() * 10, Math.random() * 10],
       [Math.random() * 10, Math.random() * 10]
     ];
-    vm.data7 = [
+    vm.visualization7.data = [
       ['Year', 'Sales', 'Expenses'],
       ['2004', Math.random() * 1000, Math.random() * 1000],
       ['2005', Math.random() * 1000, Math.random() * 1000],
