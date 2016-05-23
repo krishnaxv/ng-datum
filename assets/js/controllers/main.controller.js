@@ -185,7 +185,6 @@ function MainController($log, $interval) {
   };
 
   $interval(function () {
-    $log.info('Generating data');
     vm.isLoading = false;
     vm.data1 = [
        ['Element', 'Density', { role: 'style' }, { role: 'annotation' }],

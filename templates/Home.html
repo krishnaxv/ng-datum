@@ -1,6 +1,4 @@
-<div class="mdl-typography--text-center loader" ng-if="main.isLoading">
-  <div class="mdl-spinner mdl-js-spinner is-active"></div>
-</div>
+<loader is-loading="main.isLoading"></loader>
 <div class="page-content home" ng-if="!main.isLoading">
   <!-- <p class="mdl-typography--headline">
     {{main.heading}}
