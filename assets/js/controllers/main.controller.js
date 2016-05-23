@@ -5,6 +5,7 @@ function MainController($log, $interval) {
   vm.heading = 'Visualization';
 
   // Visualization data
+  vm.identifier1 = '_' + Math.random().toString(36).substr(2, 9);
   vm.type1 = 'BarChart';
   vm.data1 = [
      ['Element', 'Density', { role: 'style' }, { role: 'annotation' }],
@@ -34,6 +35,7 @@ function MainController($log, $interval) {
     }
   };
 
+  vm.identifier2 = '_' + Math.random().toString(36).substr(2, 9);
   vm.type2 = 'Histogram';
   vm.data2 = [
     ['Dinosaur', 'Length'],
@@ -85,6 +87,7 @@ function MainController($log, $interval) {
     }
   };
 
+  vm.identifier3 = '_' + Math.random().toString(36).substr(2, 9);
   vm.type3 = 'GeoChart';
   vm.data3 = [
     ['Country', 'Popularity'],
@@ -99,6 +102,7 @@ function MainController($log, $interval) {
     title: 'Country Popularity'
   };
 
+  vm.identifier4 = '_' + Math.random().toString(36).substr(2, 9);
   vm.type4 = 'PieChart';
   vm.data4 = [
     ['Task', 'Hours per Day'],
@@ -117,6 +121,7 @@ function MainController($log, $interval) {
     }
   };
 
+  vm.identifier5 = '_' + Math.random().toString(36).substr(2, 9);
   vm.type5 = 'PieChart';
   vm.options5 = {
     title: 'My Daily Activities',
@@ -128,6 +133,7 @@ function MainController($log, $interval) {
     is3D: true
   };
 
+  vm.identifier6 = '_' + Math.random().toString(36).substr(2, 9);
   vm.type6 = 'ScatterChart';
   vm.data6 = [
     ['Age', 'Weight'],
@@ -158,6 +164,7 @@ function MainController($log, $interval) {
     legend: 'none'
   };
 
+  vm.identifier7 = '_' + Math.random().toString(36).substr(2, 9);
   vm.type7 = 'LineChart';
   vm.data7 = [
     ['Year', 'Sales', 'Expenses'],
