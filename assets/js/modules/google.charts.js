@@ -8,8 +8,8 @@ function Visualization($log) {
       type: '<',
       data: '<',
       options: '<',
-      'drag': '<',
-      'swap': '<',
+      drag: '<',
+      swap: '<',
       download: '<',
       downloadSelector: '<'
     },
