@@ -25,7 +25,8 @@ function Visualization($log) {
         chartDownloadElement = chartDownloadElement || element.parentNode.querySelector('.mdl-card__actions .chart__download');
 
       element.addEventListener('dragstart', function(event) {
-        event.dataTransfer.setData('dragSourceID', event.target.id);
+        // Set the drag's format and data
+        event.dataTransfer.setData('text/plain', event.target.id);
       });
 
       /**
@@ -74,12 +75,15 @@ function dropVisualization($log) {
       });
       element.addEventListener('drop', function(event) {
         event.preventDefault();
-        var dragSourceIDRef = document.querySelector('#' + event.dataTransfer.getData('dragSourceID'));
+        var dragSourceIDRef = document.querySelector('#' + event.dataTransfer.getData('text'));
 
         var dragSourceParentNode = dragSourceIDRef.parentNode;
         dragSourceParentNode.appendChild(element.querySelector('visualization'));
 
         element.appendChild(dragSourceIDRef);
+
+        // Clear the drag data cache (for all formats/types)
+       event.dataTransfer.clearData();
       });
     }
   }
