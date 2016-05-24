@@ -83,7 +83,7 @@ function dropVisualization($log) {
         element.appendChild(dragSourceIDRef);
 
         // Clear the drag data cache (for all formats/types)
-       event.dataTransfer.clearData();
+        event.dataTransfer.clearData();
       });
     }
   }
