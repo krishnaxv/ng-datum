@@ -262,6 +262,14 @@ function MainController($log, $interval) {
       ['Watch TV', Math.random() * 10],
       ['Sleep', Math.random() * 10]
     ];
+    vm.visualization5.data = [
+      ['Task', 'Hours per Day'],
+      ['Work', Math.random() * 10],
+      ['Eat', Math.random() * 10],
+      ['Commute', Math.random() * 10],
+      ['Watch TV', Math.random() * 10],
+      ['Sleep', Math.random() * 10]
+    ];
     vm.visualization6.data = [
       ['Age', 'Weight'],
       [Math.random() * 10, Math.random() * 10],
