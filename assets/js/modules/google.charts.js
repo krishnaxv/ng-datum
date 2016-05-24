@@ -1,7 +1,7 @@
 var googleCharts = angular
   .module('google-charts', []);
 
-function Visualization($log) {
+function Visualization($log, $timeout) {
   return {
     restrict: 'E',
     scope: {
@@ -45,16 +45,18 @@ function Visualization($log) {
         chartDownloadElement.setAttribute('href', chart.getImageURI());
         chartDownloadElement.setAttribute('download', $scope.options.title ? $scope.options.title : DEFAULT_CHART_IMAGE_TITLE);
       });
-      drawChart();
+      // drawChart();
 
       $scope.$watch('data', function(newValue, oldValue) {
-        drawChart();
+        $timeout(function() {
+          drawChart();
+        });
       });
     }
   }
 }
 
-Visualization.$inject = ['$log'];
+Visualization.$inject = ['$log', '$timeout'];
 
 /**
  * Visualization

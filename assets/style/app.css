@@ -84,4 +84,13 @@ input {
   margin: 16px auto;
 }
 
+/**
+ * Hack due to mdl-* classes loading after Google chart initialization resulting in lesser width than required
+ * Fixed via $timeout() in `visualization` directive
+ */
+/*.mdl-grid > div {
+  min-width: 330px;
+}*/
+/* -_- */
+
 /* End MDLite changes */
