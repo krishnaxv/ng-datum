@@ -5,13 +5,7 @@
     <div class="mdl-cell" ng-repeat="visualization in main.visualizationData" ng-class="visualization.layout.width == '-' ? ['mdl-cell--6-col', 'mdl-cell--8-col-tablet'] : 'mdl-cell--12-col'">
       <div class="mdl-card mdl-shadow--2dp chart__container" drop-visualization>
         <visualization id="{{visualization.identifier}}" class="visualization" type="visualization.type" data="visualization.data" options="visualization.options" draggable="true">
-          <div class="mdl-card__actions mdl-card--border">
-            <a ng-href="#" class="chart__download" download>
-              <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-js-ripple-effect mdl-button--colored">
-                <i class="material-icons">file_download</i>
-              </button>
-            </a>
-          </div>
+          <visualization-action></visualization-action>
         </visualization>
       </div>
     </div>
