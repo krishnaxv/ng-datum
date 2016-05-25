@@ -9,7 +9,10 @@ function visualizationAction($log) {
           </button>
         </a>
       </div>
-    `
+    `,
+    link: function($scope, $element, $attrs) {
+      componentHandler.upgradeDom();
+    }
   }
 }
 
