@@ -72,11 +72,33 @@ function dropVisualization($log) {
     restrict: 'A',
     link: function($scope, $element, $attrs) {
       var element = $element[0];
+
       element.addEventListener('dragover', function(event) {
+        // Don't highlight if drop element itself is the source element
+        // if (event.dataTransfer.getData('text') == element.querySelector('visualization').getAttribute('id')) {
+        //   return;
+        // }
+
+        element.classList.add('mdl-shadow--8dp');
         event.preventDefault();
       });
+
+      element.addEventListener('dragleave', function(event) {
+        element.classList.remove('mdl-shadow--8dp');
+        event.preventDefault();
+      });
+
       element.addEventListener('drop', function(event) {
         event.preventDefault();
+
+        // Remove shadow class
+        element.classList.remove('mdl-shadow--8dp');
+
+        // `return` if drop element itself is the source element
+        if (event.dataTransfer.getData('text') == element.querySelector('visualization').getAttribute('id')) {
+          return;
+        }
+
         var dragSourceIDRef = document.querySelector('#' + event.dataTransfer.getData('text'));
 
         var dragSourceParentNode = dragSourceIDRef.parentNode;
