@@ -84,6 +84,24 @@ input {
   margin: 16px auto;
 }
 
+.mdl-mini-footer.footer {
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+/*.mdl-mini-footer.footer ul {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}*/
+
 /**
  * Hack due to mdl-* classes loading after Google chart initialization resulting in lesser width than required
  * Fixed via $timeout() in `visualization` directive
