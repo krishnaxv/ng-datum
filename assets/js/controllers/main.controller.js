@@ -1,4 +1,4 @@
-function MainController($log, $interval) {
+function MainController($log, $interval, LogService) {
   var vm = this;
 
   vm.isLoading = true;
@@ -334,7 +334,7 @@ function MainController($log, $interval) {
   }, 5000);
 }
 
-MainController.$inject = ['$log', '$interval'];
+MainController.$inject = ['$log', '$interval', 'LogService'];
 
 angular
   .module('datumApp')
