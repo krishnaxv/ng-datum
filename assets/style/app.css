@@ -75,11 +75,6 @@ input {
   padding-right: 0 !important;
 }
 
-.user-details .mdl-cell {
-  margin: 0 auto;
-  margin: 16px auto;
-}
-
 .mdl-button {
   margin: 16px auto;
 }
@@ -92,15 +87,6 @@ input {
   -ms-flex-align: center;
   align-items: center;
 }
-
-/*.mdl-mini-footer.footer ul {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-}*/
 
 /**
  * Hack due to mdl-* classes loading after Google chart initialization resulting in lesser width than required
